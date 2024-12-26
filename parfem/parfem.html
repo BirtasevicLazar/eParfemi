@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalji o parfemu</title>
+    <link rel="stylesheet" href="parfem.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="parfem-container">
+        <div class="parfem-image-wrapper">
+            <img id="parfem-image" class="parfem-image" alt="Slika parfema">
+        </div>
+        <div class="parfem-details">
+            <h1 id="parfem-name" class="parfem-title"></h1>
+            <p id="parfem-price" class="parfem-price"></p>
+            <p id="parfem-description" class="parfem-description"></p>
+        </div>
+    </div>
+
+<script>
+function getQueryParams() {
+    let params = {};
+    let urlParams = new URLSearchParams(window.location.search);
+    params.name = urlParams.get('name');
+    params.price = urlParams.get('price');
+    params.description = urlParams.get('description');
+    params.imageUrl = urlParams.get('imageUrl');
+    return params;
+}
+
+let parfemInfo = getQueryParams();
+document.getElementById('parfem-name').textContent = parfemInfo.name;
+document.getElementById('parfem-price').textContent = parfemInfo.price;
+document.getElementById('parfem-description').textContent = parfemInfo.description;
+
+const imageUrl = parfemInfo.imageUrl.startsWith('../') ? 
+    parfemInfo.imageUrl : 
+    '../' + parfemInfo.imageUrl;
+document.getElementById('parfem-image').src = imageUrl;
+</script>
+
+</body>
+</html>

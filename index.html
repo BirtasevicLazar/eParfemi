@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eParfemi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">eParfemi</div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Pocetna</a></li>
+            <li><a href="korpa.html">Korpa</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>eParfemi</h1>
+            <p>Vaša destinacija za luksuzne mirise</p>
+            <a href="#items" class="hero-btn">Pogledaj ponudu</a>
+        </div>
+    </section>
+
+    <div id="items">
+        <div class="item">
+            <div class="item-image-container">
+                <img src="slike/armaniswy.jpg" alt="Armani Stronger With You" class="item-image">
+            </div>
+            <div class="item-details">
+                <h2>Armani Stronger With You</h2>
+                <p class="price">15.900 RSD</p>
+                <p class="description">Muški parfem sa notama kardamoma i vanile. Savršen za večernje izlaske.</p>
+                <button onclick="addToCart({name: 'Armani Stronger With You', price: 15900})">
+                    <i class="fas fa-shopping-cart"></i> Dodaj u korpu
+                </button>
+                <button onclick="viewDetails('Armani Stronger With You', '15.900 RSD', 'Muški parfem sa notama kardamoma i vanile. Savršen za večernje izlaske.', 'slike/armaniswy.jpg')">
+                    Detalji
+                </button>
+            </div>
+        </div>
+        
+
+        <div class="item">
+            <div class="item-image-container">
+                <img src="slike/erbapura.jpg" alt="Xerjoff Erba Pura" class="item-image">
+            </div>
+            <div class="item-details">
+                <h2>Xerjoff Erba Pura</h2>
+                <p class="price">32.000 RSD</p>
+                <p class="description">Uniseks parfem sa notama voća i vanile. Luksuzan i osvežavajući miris.</p>
+                <button onclick="addToCart({name: 'Xerjoff Erba Pura', price: 32000})">
+                    <i class="fas fa-shopping-cart"></i> Dodaj u korpu
+                </button>
+                <button onclick="viewDetails('Xerjoff Erba Pura', '32.000 RSD', 'Uniseks parfem sa notama voća i vanile. Luksuzan i osvežavajući miris.', 'slike/erbapura.jpg')">
+                    Detalji
+                </button>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-image-container">
+                <img src="slike/kilian.jpg" alt="Kilian Angels Share" class="item-image">
+            </div>
+            <div class="item-details">
+                <h2>Kilian Angels Share</h2>
+                <p class="price">45.000 RSD</p>
+                <p class="description">Uniseks parfem sa notama konjaka i vanile. Topao i luksuzan miris.</p>
+                <button onclick="addToCart({name: 'Kilian Angels Share', price: 45000})">
+                    <i class="fas fa-shopping-cart"></i> Dodaj u korpu
+                </button>
+                <button onclick="viewDetails('Kilian Angels Share', '45.000 RSD', 'Uniseks parfem sa notama konjaka i vanile. Topao i luksuzan miris.', 'slike/kilian.jpg')">
+                    Detalji
+                </button>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-image-container">
+                <img src="slike/xerjoff.jpg" alt="Xerjoff Naxos" class="item-image">
+            </div>
+            <div class="item-details">
+                <h2>Xerjoff Naxos</h2>
+                <p class="price">35.000 RSD</p>
+                <p class="description">Muški parfem sa notama meda, duvana i vanile. Sofisticiran i dugotrajan miris.</p>
+                <button onclick="addToCart({name: 'Xerjoff Naxos', price: 35000})">
+                    <i class="fas fa-shopping-cart"></i> Dodaj u korpu
+                </button>
+                <button onclick="viewDetails('Xerjoff Naxos', '35.000 RSD', 'Muški parfem sa notama meda, duvana i vanile. Sofisticiran i dugotrajan miris.', 'slike/xerjoff.jpg')">
+                    Detalji
+                </button>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-image-container">
+                <img src="slike/fireplace.jpg" alt="Maison Margiela By the Fireplace" class="item-image">
+            </div>
+            <div class="item-details">
+                <h2>MM By the Fireplace</h2>
+                <p class="price">35.000 RSD</p>
+                <p class="description">Uniseks parfem sa notama drveta i vanile. Topao i prijatan miris.</p>
+                <button onclick="addToCart({name: 'Maison Margiela By the Fireplace', price: 35000})">
+                    <i class="fas fa-shopping-cart"></i> Dodaj u korpu
+                </button>
+                <button onclick="viewDetails('MM By the Fireplace', '35.000 RSD', 'Uniseks parfem sa notama drveta i vanile. Topao i prijatan miris.', 'slike/fireplace.jpg')">
+                    Detalji
+                </button>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-image-container">
+                <img src="slike/pdmlayton.jpg" alt="Parfums de Marly Layton" class="item-image">
+            </div>
+            <div class="item-details">
+                <h2>Parfums de Marly Layton</h2>
+                <p class="price">35.000 RSD</p>
+                <p class="description">Muški parfem sa notama jabuke i vanile. Elegantan i svež miris.</p>
+                <button onclick="addToCart({name: 'Parfums de Marly Layton', price: 35000})">
+                    <i class="fas fa-shopping-cart"></i> Dodaj u korpu
+                </button>
+                <button onclick="viewDetails('Parfums de Marly Layton', '35.000 RSD', 'Muški parfem sa notama jabuke i vanile. Elegantan i svež miris.', 'slike/pdmlayton.jpg')">
+                    Detalji
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="checkout-container">
+        <button class="main-checkout-btn" onclick="checkout()">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Pregledaj korpu</span>
+            <span class="cart-count">0</span>
+        </button>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>O nama</h2>
+                <p>eParfemi je vaša destinacija za luksuzne mirise. Nudimo širok izbor parfema za sve prilike.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Brzi linkovi</h2>
+                <ul>
+                    <li><a href="index.html">Pocetna</a></li>
+                    <li><a href="#parfemi">Parfemi</a></li>
+                    <li><a href="korpa.html">Korpa</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Kontakt</h2>
+                <p>Email: info@eparfemi.com</p>
+                <p>Telefon: +381 11 123 456</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 eParfemi | Sva prava zadržana
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

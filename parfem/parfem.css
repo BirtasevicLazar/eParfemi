@@ -1,0 +1,105 @@
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parfem-container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 2rem;
+    max-width: 1000px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.parfem-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.parfem-image:hover {
+    transform: scale(1.02);
+}
+
+.parfem-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.parfem-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.parfem-price {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin: 1rem 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.parfem-description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+/* Responzivni dizajn */
+@media (max-width: 768px) {
+    .parfem-container {
+        grid-template-columns: 1fr;
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .parfem-title {
+        font-size: 2rem;
+    }
+
+    .parfem-price {
+        font-size: 1.5rem;
+    }
+
+    .parfem-description {
+        font-size: 1rem;
+    }
+}
+
+/* Animacije */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.parfem-container {
+    animation: fadeIn 0.8s ease-out;
+}
+
+

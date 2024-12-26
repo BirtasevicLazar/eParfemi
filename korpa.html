@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korpa - eParfemi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">eParfemi</div>
+    </nav>
+    
+    <div class="cart-container">
+        <h1>Vaša Korpa</h1>
+        <div id="cartItems"></div>
+        <div id="cartTotal"></div>
+        <button onclick="checkout()" class="checkout-btn">Završi kupovinu</button>
+        <a href="index.html" class="back-to-shop-btn">Nazad na kupovinu</a>
+    </div>
+
+
+    
+
+    <script>
+        let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartDiv = document.getElementById('cartItems');
+        const totalDiv = document.getElementById('cartTotal');
+        let total = 0;
+
+        function updateCart() {
+            cartDiv.innerHTML = '';
+            total = 0;
+            cartItems.forEach((item, index) => {
+                total += item.price;
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'cart-item';
+                itemDiv.innerHTML = `
+                    <span>${item.name}</span>
+                    <span>${item.price} RSD</span>
+                    <button onclick="removeFromCart(${index})" class="remove-btn">Ukloni</button>
+                `;
+                cartDiv.appendChild(itemDiv);
+            });
+            totalDiv.innerHTML = `<h3>Ukupno: ${total} RSD</h3>`;
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+        }
+
+        function removeFromCart(index) {
+            cartItems.splice(index, 1);
+            updateCart();
+        }
+
+        updateCart();
+    </script>
+</body>
+</html>
